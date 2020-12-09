@@ -1,8 +1,1 @@
-# Project01
-
-Memory match game --
--There will be 2 players
--Their scores will be displayed and start with 1
--The point of the game will be to guess everything correctly.
--To win, a player needs fewer guesses.
--All tries will be logged and compared after the 2nd player plays through.
+# Project01 - A memory matching game. The idea is: you have to match things together. If you match everything in the fewest tries, compared to your opponent, then you win. 
