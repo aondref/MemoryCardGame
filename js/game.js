@@ -1,63 +1,48 @@
-// //When the document loads this function starts immediately.
-// $(() => {
-//     //Array: This array will make up the elements of the game.
-//     const elements = ["red", "red", "blue", "blue", "yellow", "yellow", "green", "green", "purple", "purple", "orange", "orange", "violent", "violent", "white", "white"];
-
-//     //Player01 and Player02 Score
-//     let Player01 = 0;
-//     let Player02 = 0;
-
-//     //Populate the Game Board
-//     for (let j = 0; j < elements.length; j++) {
-//         console.log(elements[j]);
-//         $("#board").add("div").addClass("box").text(elements[j]);
-//     }
-// })
-
+//Run the app as soon as the document runs
 $(() => {
-    const firstNumbers = [1, 2, 3, 4, 5, 6, 7, 8];
-    const secondNumbers = [1, 2, 3, 4, 5, 6, 7, 8];
-    let playerChoice1 = [];
-    let playerChoice2 = [];
-    const jQueryGreet = "<p>Hello World!</p>";
-    let total;
+     
+    //These are the choices that will populate the "board"
+    const numbers = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
+    let choice = [];
+    let idKeys = [];
+    let matches = [];
 
-    $("body").append(jQueryGreet);
-    for (let j = 1; j <= 16; j++) {
-        const pStart = "<p>";
-        const content = j;
-        const pEnd = "</p>";
-        let total = pStart + content + pEnd;
-        $("body").append(total);
-    }
-    
-    $("p").click(function() {
-        const content = $(this).text();
-        console.log(content);
-        secondNumbers.push(content);
-        $(this).hide();
-    })
+    //I needed a way to randomize the choices for the board
+    const rand = numbers.sort(() => Math.random() - 0.5);
 
-    
-    console.log(secondNumbers);
+    //This will give the start button some purpose
+    // $(".start").click(function() {
 
-    // for (let j = 0; j < colors.length; j++) {
-    //     if(colors[j] === "blue" || colors[j] === "yellow") {
-    //         $("body").append(`<p class=box>${colors[j]}</p>`);
-    //     } else {
-
-    //     }
+        //This for loop will create the cards/board depending on array length
+        for (let j = 0; j < numbers.length; j++) {
+            $(".grid").append(`<div class=card-container><div class=card data-key=${rand[j]}><div class=card-front></div><div class=card-back><p class=card-content>${rand[j]}</p></div></div></div>`);
+        }
         
-    //     $("p").click(function() {
-    //         $(this).hide();
-    //     });
-    //     $("p").click(function() {
-    //         let item1 = $(this).text();
-    //         if (item1 === "yellow") {
-    //             console.log(item1);
-    //         } else {
-    //             console.log("this isn't yellow");
-    //         }
-    //     })
-    // }
+        //This helps with flipping the cards
+        $(".card").bind('click', function() {
+            $(this).addClass("flip");
+            idKeys.push($(".card").data("key"));
+            choice.push($(this, ".card-content").text());
+            console.log(choice);
+            console.log(`There are ${idKeys} keys.`);
+            if (idKeys.length === 2) {
+            }
+            if(idKeys[0] == idKeys[1]) {
+                $("div.flip").removeClass('flip');
+                setTimeout(function() {
+                    $("div.flip").removeClass("flip");
+                }, 1000);
+                
+            } else if (choice[0] === choice[1]) {
+
+            }
+        })
+
+
+
+
+    // })
 })
+
+    //To Flip the Card... The CSS and html was painful!
+
