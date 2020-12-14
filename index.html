@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice</title>
+    <title>Memory Match Game</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="./js/scripts.js"></script>
@@ -11,11 +11,26 @@
 <body>
 
     <button class="start">Start Game</button>
-    <button class="end">End Game</button>
+    <button class="end">Reset</button>
 
     <div class="grid-container">
         <div class="grid">
         </div>
+    </div>
+
+    <div class="some-other-container">
+        <p class="content"></p>
+        <p class="something"></p>
+    </div>
+
+
+
+    <div class="hint-container">
+        <p class="hint">Player1 Tries:</p>
+        <p class="hint-content player1-score"></p>
+        <p class="hint">Player2 Tries:</p>
+        <p class="hint-content player2-score"></p>
+        <p class="who-wins"></p>
     </div>
 
 </body>
