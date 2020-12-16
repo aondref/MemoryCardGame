@@ -25,6 +25,9 @@ $(() => {
     //This helps create the "start game" effect.
     $(".grid-container, .hint-container").hide();
 
+    //This creates a true and false variable
+    let onGo = true;
+
     //This will give the start button some purpose.
     $(".start").on("click", function() {
         $(".grid-container, .hint-container").show();
@@ -39,6 +42,8 @@ $(() => {
             $(".grid").append(`<div class=card-container><div class=card data-key=${j}><div class=card-front></div><div class=card-back><p class=card-content>${rand[j]}</p></div></div></div>`);
             console.log(j);
         }
+
+        
 
             //This creates the flip card effect. 
             $(".card").bind('click', function() {
@@ -86,7 +91,7 @@ $(() => {
                 if (matches.length === result) {
                     tries.push(totalAttempts); //The number of tries get pushed into the choices array.
 
-                    //If the tries array has 2 elements, then some other stuff happen.
+                    //Having choice and choices is confusing. If choices array is 2 this activates.
                     if (tries.length === 2) {
                         $(".player1-attempts").append(tries[0]); //The first index of choices array gets logged to player 1 span element.
                         $(".player2-attempts").append(tries[1]); //The second index of choices array gets logged to player 2 span element.
