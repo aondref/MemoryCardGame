@@ -43,8 +43,6 @@ $(() => {
             console.log(j);
         }
 
-        
-
             //This creates the flip card effect. 
             $(".card").bind('click', function() {
                 $(this).addClass("flip"); //The actual effect is styled with CSS. Adding the flip class to card creates the effect.
@@ -101,6 +99,8 @@ $(() => {
                         if (tries[0] < tries[1]) { //If the first index of choices array is less then the second, this activates.
                             $(".message").empty();
                             $(".update").append(`Player01 Wins`);
+                        } else if (tries[0] === tries[1]) {
+                            $(".message").append(`It's a draw!`);
                         } else { //Otherwise this gets activated.
                             $(".message").empty();
                             $(".update").append(`Player02 Wins`);
