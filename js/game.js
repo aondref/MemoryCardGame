@@ -50,8 +50,8 @@ $(() => {
                 $(this).addClass("flip"); //The actual effect is styled with CSS. Adding the flip class to card creates the effect.
                 idKeys.push($(this).data("key")); //After you click a card, it's key gets added to the idKeys aray.
                 choice.push($(this, ".card-content").text()); //After you click a card, the contents of its HTML elements get added to the choice array.
-                const result = numbers.length / 2; //I created result for comparison purposes later.
-                const resetMessage = setTimeout(function() { $(".message").empty(); }, 2500); //This removes the message after a certain amount of time.
+                let result = numbers.length / 2; //I created result for comparison purposes later.
+                let resetMessage = setTimeout(function() { $(".message").empty(); }, 2500); //This removes the message after a certain amount of time.
                 
                 //I wanted to create a delay effect for the cards when they flip. Without it, the second card won't flip at all.
                 if ( idKeys.length === 2) {
@@ -93,9 +93,12 @@ $(() => {
 
                     //Having choice and choices is confusing. If choices array is 2 this activates.
                     if (tries.length === 2) {
+                        console.log(tries);
+                        console.log(tries[0]);
+                        console.log(tries[1]);
                         $(".player1-attempts").append(tries[0]); //The first index of choices array gets logged to player 1 span element.
                         $(".player2-attempts").append(tries[1]); //The second index of choices array gets logged to player 2 span element.
-                        if ($(tries[0]) < $(tries[1])) { //If the first index of choices array is less then the second, this activates.
+                        if (tries[0] < tries[1]) { //If the first index of choices array is less then the second, this activates.
                             $(".message").empty();
                             $(".update").append(`Player01 Wins`);
                         } else { //Otherwise this gets activated.
@@ -118,11 +121,9 @@ $(() => {
                         totalAttempts = 0;
                     }, 2000); //This controls the amount of time before the game session restarts.
                 }
-            }
-            
+            } 
         })
     })
-
     $(".end").on("click", function() {
         location.reload();
     })
