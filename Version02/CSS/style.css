@@ -10,19 +10,36 @@
     display: block;
     height: 100vh;
     width: 100vw;
+    background-color: #D6D6D6;
+}
+
+#start-game-page header {
+    text-align: center;
+    font-size: 4.5vw;
+    background-color: #2B7AF0;
+    color: #fff;
+    padding: 5px;
 }
 
 #start-game-page .buttons {
     display: grid;
+    grid-template-columns: auto auto;
     align-content: center;
     justify-content: center;
-    height: 100%;
-    grid-gap: 4px;
+    height: 90%;
+    grid-gap: 20px;
 }
 
 .buttons button {
-    padding: 5px;
-    font-size: 5.5vw;
+    padding: 15px;
+    font-size: 4.5vw;
+    background-color: #2B7AF0;
+    color: #fff;
+    transition: .3s;
+}
+
+.buttons button:hover {
+    background-color: #003A9E;
 }
 
 /****** Options Page ******/
