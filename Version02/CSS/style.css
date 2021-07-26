@@ -22,7 +22,7 @@
 }
 
 #start-game-page .buttons {
-    display: grid;
+    display: none;
     grid-template-columns: auto auto;
     align-content: center;
     justify-content: center;
@@ -40,6 +40,10 @@
 
 .buttons button:hover {
     background-color: #003A9E;
+}
+
+#player-choice {
+    display: block;
 }
 
 /****** Options Page ******/

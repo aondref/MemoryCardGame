@@ -19,3 +19,7 @@
 //     console.log(animals[emptyArray[j]]);
 // }
 
+//Start Page Buttons
+const startBtn = document.querySelector('#start-btn');
+const optionBtn = document.querySelector('#options-btn');
+
