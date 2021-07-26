@@ -1,0 +1,34 @@
+/****** General ******/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/****** Start Game Page ******/
+#start-game-page {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+}
+
+#start-game-page .buttons {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    grid-gap: 4px;
+}
+
+.buttons button {
+    padding: 5px;
+    font-size: 5.5vw;
+}
+
+/****** Options Page ******/
+
+
+/****** Game Page ******/
+
+
+/****** Media Query ******/
