@@ -22,7 +22,7 @@
 }
 
 #start-game-page .buttons {
-    display: none;
+    display: grid;
     grid-template-columns: auto auto;
     align-content: center;
     justify-content: center;
@@ -42,8 +42,8 @@
     background-color: #003A9E;
 }
 
-#player-choice {
-    display: block;
+#start-game-page #player-choice {
+    display: none;
 }
 
 /****** Options Page ******/

@@ -23,3 +23,13 @@
 const startBtn = document.querySelector('#start-btn');
 const optionBtn = document.querySelector('#options-btn');
 
+//Start and Player Pages
+const buttons = document.querySelector('.buttons');
+const playerChoice = document.querySelector('#player-choice');
+
+startBtn.addEventListener("click", playerPage);
+
+function playerPage() {
+    buttons.style.display = "none";
+    playerChoice.style.display = "block";
+}
