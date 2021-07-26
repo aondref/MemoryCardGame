@@ -44,6 +44,19 @@
 
 #start-game-page #player-choice {
     display: none;
+    grid-template-columns: auto auto;
+    align-content: center;
+    justify-content: center;
+    height: 90%;
+    grid-gap: 20px;
+}
+
+#player-choice button {
+    padding: 15px;
+    font-size: 4.5vw;
+    background-color: #2B7AF0;
+    color: #fff;
+    transition: .3s;
 }
 
 /****** Options Page ******/

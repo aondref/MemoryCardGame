@@ -22,14 +22,23 @@
 //Start Page Buttons
 const startBtn = document.querySelector('#start-btn');
 const optionBtn = document.querySelector('#options-btn');
+const backBtn = document.querySelector('#back-btn');
 
 //Start and Player Pages
 const buttons = document.querySelector('.buttons');
 const playerChoice = document.querySelector('#player-choice');
 
+//Button Functionality
 startBtn.addEventListener("click", playerPage);
+backBtn.addEventListener("click", homePage);
 
+//Button Functions
 function playerPage() {
     buttons.style.display = "none";
-    playerChoice.style.display = "block";
+    playerChoice.style.display = "grid";
+}
+
+function homePage() {
+    buttons.style.display = "grid";
+    playerChoice.style.display = "none";
 }
