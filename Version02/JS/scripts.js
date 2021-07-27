@@ -63,7 +63,8 @@ function gameStart() {
 }
 
 function exitButton() {
-    startGamePage.style.display = "grid";
+    startGamePage.style.display = "block";
+    buttons.style.display = "grid";
     gamePage.style.display = "none";
 }
 
