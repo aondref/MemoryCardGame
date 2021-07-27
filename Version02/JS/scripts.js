@@ -34,7 +34,6 @@ const player01Choice = document.querySelector('#player01Btn');
 const player02Choice = document.querySelector('#player02Btn');
 const startGamePage = document.querySelector('#start-game-page');
 
-startGamePage.display.style = "grid";
 
 //Button Functionality
 startBtn.addEventListener("click", playerPage);
@@ -60,11 +59,12 @@ function gameStart() {
     gamePage.style.display = "grid";
     buttons.style.display = "none";
     playerChoice.style.display = "none";
+    startGamePage.style.display = "none";
 }
 
 function exitButton() {
-    gamePage.display.style = "block";
-    startGamePage.display.style = "none";
+    startGamePage.style.display = "grid";
+    gamePage.style.display = "none";
 }
 
 //Game Initializer
