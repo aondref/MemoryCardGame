@@ -7,7 +7,7 @@
 
 /****** Start Game Page ******/
 #start-game-page {
-    display: block;
+    display: none;
     height: 100vh;
     width: 100vw;
     background-color: #D6D6D6;
@@ -26,7 +26,7 @@
     grid-template-columns: auto auto;
     align-content: center;
     justify-content: center;
-    height: 90%;
+    height: 80%;
     grid-gap: 20px;
 }
 
@@ -47,7 +47,7 @@
     grid-template-columns: auto auto;
     align-content: center;
     justify-content: center;
-    height: 90%;
+    height: 80%;
     grid-gap: 20px;
 }
 
@@ -63,6 +63,15 @@
 
 
 /****** Game Page ******/
+#game-page {
+    display: none;
+    height: 100%;
+}
 
+#game-page #exit-btn {
+    padding: 10px;
+    font-size: 3.5vw;
+    background-color: #2B7AF0;
+}
 
 /****** Media Query ******/
