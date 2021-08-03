@@ -19,12 +19,43 @@
 //     console.log(animals[emptyArray[j]]);
 // }
 
-//Buttons
+//////Start Page
 const startBtn = document.querySelector('#start-btn');
 const optionBtn = document.querySelector('#options-btn');
+
+////Button Functionality
+startBtn.addEventListener("click", playerPage);
+
+function playerPage() {
+    playerChoice.style.display = "grid";
+    buttons.style.display = "none";
+    gamePage.style.display = "none";
+}
+
+//////Next Page
 const backBtn = document.querySelector('#back-btn');
 const continueBtn = document.querySelector('#continue-btn');
+
+const span = document.createElement('span');
+const player01 = document.createTextNode('Player 1 ');
+const player02 = document.createTextNode('Player 2');
+span.appendChild(player01);
+const element = document.querySelector('#game-page-header');
+element.appendChild(span);
+
+
+////Button Functionality
+backBtn.addEventListener("click", homePage);
+
+function homePage() {
+    buttons.style.display = "grid";
+    playerChoice.style.display = "none";
+    gamePage.style.display = "none";
+}
+
+//////Game Page
 const exitBtn = document.querySelector('#exit-btn');
+
 
 //Start, Player, Score and Game Pages
 const buttons = document.querySelector('.buttons');
@@ -35,30 +66,26 @@ const player02Choice = document.querySelector('#player02Btn');
 const startGamePage = document.querySelector('#start-game-page');
 const player01Score = document.querySelector('#player01Score').innerHTML;
 const player02Score = document.querySelector('#player02Score').innerHTML;
+const scoreBtn = document.querySelector('#scoreBtn');
 
-console.log(player01Score + 1);
-console.log(player02Score + 1);
+console.log(parseInt(player01Score) + 1);
+console.log(parseInt(player02Score) + 1);
 
+//Scoring Functionality
+scoreBtn.addEventListener('click', scoreIncrease)
+
+function scoreIncrease() {
+    let score = 0;
+    console.log(score += 1);
+}
 
 //Button Functionality
-startBtn.addEventListener("click", playerPage);
-backBtn.addEventListener("click", homePage);
 continueBtn.addEventListener("click", gameStart);
 exitBtn.addEventListener("click", exitButton);
 
 
 //Button Functions
-function playerPage() {
-    playerChoice.style.display = "grid";
-    buttons.style.display = "none";
-    gamePage.style.display = "none";
-}
 
-function homePage() {
-    buttons.style.display = "grid";
-    playerChoice.style.display = "none";
-    gamePage.style.display = "none";
-}
 
 function gameStart() {
     gamePage.style.display = "grid";
