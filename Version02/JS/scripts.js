@@ -26,13 +26,18 @@ const backBtn = document.querySelector('#back-btn');
 const continueBtn = document.querySelector('#continue-btn');
 const exitBtn = document.querySelector('#exit-btn');
 
-//Start, Player, and Game Pages
+//Start, Player, Score and Game Pages
 const buttons = document.querySelector('.buttons');
 const playerChoice = document.querySelector('#player-choice');
 const gamePage = document.querySelector('#game-page');
 const player01Choice = document.querySelector('#player01Btn');
 const player02Choice = document.querySelector('#player02Btn');
 const startGamePage = document.querySelector('#start-game-page');
+const player01Score = document.querySelector('#player01Score').innerHTML;
+const player02Score = document.querySelector('#player02Score').innerHTML;
+
+console.log(player01Score + 1);
+console.log(player02Score + 1);
 
 
 //Button Functionality
