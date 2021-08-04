@@ -42,7 +42,7 @@
     background-color: #003A9E;
 }
 
-#start-game-page #player-choice {
+#start-game-page #player-choice #choice-container {
     display: none;
     grid-template-columns: auto auto;
     align-content: center;
@@ -51,7 +51,7 @@
     grid-gap: 20px;
 }
 
-#player-choice button {
+#player-choice #choice-container button {
     padding: 15px;
     font-size: 4.5vw;
     background-color: #2B7AF0;

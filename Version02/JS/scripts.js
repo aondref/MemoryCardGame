@@ -27,7 +27,8 @@ const optionBtn = document.querySelector('#options-btn');
 startBtn.addEventListener("click", playerPage);
 
 function playerPage() {
-    playerChoice.style.display = "grid";
+    cardChoice.style.display = "grid";
+    choiceContainer.style.display = "grid";
     buttons.style.display = "none";
     gamePage.style.display = "none";
 }
@@ -35,6 +36,9 @@ function playerPage() {
 //////Next Page
 const backBtn = document.querySelector('#back-btn');
 const continueBtn = document.querySelector('#continue-btn');
+const playerChoice = document.querySelector('#player-choice');
+const choiceContainer = document.querySelector('#choice-container');
+const cardChoice = document.querySelector('#card-choice')
 
 const span = document.createElement('span');
 const player01 = document.createTextNode('Player 1 ');
@@ -59,7 +63,6 @@ const exitBtn = document.querySelector('#exit-btn');
 
 //Start, Player, Score and Game Pages
 const buttons = document.querySelector('.buttons');
-const playerChoice = document.querySelector('#player-choice');
 const gamePage = document.querySelector('#game-page');
 const player01Choice = document.querySelector('#player01Btn');
 const player02Choice = document.querySelector('#player02Btn');
